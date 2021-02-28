@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "name": "propertie",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "text",
+      "maxLength": 70,
+      "minLength": 20,
+      "required": true,
+      "unique": true
+    },
+    "area": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "bedroom": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "bathroom": {
+      "default": 0,
+      "required": true,
+      "type": "integer"
+    },
+    "toilet": {
+      "type": "integer",
+      "default": 0,
+      "unique": false,
+      "required": true
+    },
+    "stories": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "private": true
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "plots": {
+      "default": 0,
+      "required": true,
+      "type": "integer"
+    },
+    "agent": {
+      "via": "properties",
+      "model": "agent"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 140,
+      "minLength": 15
+    },
+    "category": {
+      "via": "properties",
+      "model": "categorie"
+    },
+    "statu": {
+      "model": "statu",
+      "via": "properties"
+    },
+    "favourites": {
+      "via": "properties",
+      "collection": "favourite"
+    },
+    "image": {
+      "model": "image",
+      "via": "propertie"
+    },
+    "sittingroom": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}

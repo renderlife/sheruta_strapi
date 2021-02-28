@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "status",
+  "info": {
+    "name": "statu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "maxLength": 40
+    },
+    "properties": {
+      "via": "statu",
+      "collection": "propertie"
+    },
+    "image_url": {
+      "type": "text"
+    }
+  }
+}

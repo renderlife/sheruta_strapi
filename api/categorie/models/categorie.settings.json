@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "categorie",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "maxLength": 30
+    },
+    "image_url": {
+      "type": "text"
+    },
+    "show": {
+      "type": "boolean",
+      "default": true
+    },
+    "properties": {
+      "collection": "propertie",
+      "via": "category"
+    },
+    "for": {
+      "type": "string",
+      "maxLength": 15
+    }
+  }
+}

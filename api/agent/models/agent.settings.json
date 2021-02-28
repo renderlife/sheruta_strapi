@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agents",
+  "info": {
+    "name": "agent",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30,
+      "minLength": 3,
+      "unique": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "logo_url": {
+      "type": "text",
+      "default": "https://cdn.pixabay.com/photo/2016/11/08/15/21/user-1808597_960_720.png",
+      "required": true,
+      "minLength": 5
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "agent"
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true,
+      "maxLength": 15,
+      "minLength": 11
+    },
+    "properties": {
+      "collection": "propertie",
+      "via": "agent"
+    },
+    "banner_url": {
+      "type": "text",
+      "default": "https://img.freepik.com/free-vector/green-background-with-halftone-effect-squares_23-2148661430.jpg?size=626&ext=jpg",
+      "required": true
+    }
+  }
+}
