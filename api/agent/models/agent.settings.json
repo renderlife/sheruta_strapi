@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string",
       "required": true,
       "maxLength": 30,

@@ -63,7 +63,7 @@
       "type": "text",
       "default": "https://cdn.pixabay.com/photo/2016/11/08/15/21/user-1808597_960_720.png",
       "required": true,
-      "maxLength": 5
+      "minLength": 5
     },
     "bio": {
       "type": "text",
@@ -81,8 +81,16 @@
       "model": "agent"
     },
     "favourite": {
+      "model": "favourite",
+      "via": "users_permissions_user"
+    },
+    "personal_info": {
       "via": "users_permissions_user",
-      "model": "favourite"
+      "model": "personal-info"
+    },
+    "conversations": {
+      "via": "users_permissions_users",
+      "collection": "conversation"
     }
   }
 }

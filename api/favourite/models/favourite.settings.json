@@ -20,9 +20,9 @@
       "type": "string"
     },
     "users_permissions_user": {
+      "via": "favourite",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "favourite"
+      "model": "user"
     }
   }
 }

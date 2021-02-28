@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personal_infos",
+  "info": {
+    "name": "PersonalInfo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "company_name": {
+      "type": "string"
+    },
+    "company_address": {
+      "type": "string"
+    },
+    "supervisor_name": {
+      "type": "string"
+    },
+    "supervisor_number": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "personal_info"
+    },
+    "religion": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    },
+    "marital_status": {
+      "type": "string"
+    }
+  }
+}
