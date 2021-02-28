@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "categorie",
+    "name": "Categorie",
     "description": ""
   },
   "options": {
@@ -28,9 +28,10 @@
       "collection": "propertie",
       "via": "category"
     },
-    "for": {
-      "type": "string",
-      "maxLength": 15
+    "requires_personal_info": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
