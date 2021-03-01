@@ -38,8 +38,17 @@
       "model": "user"
     },
     "conversation": {
-      "model": "conversation",
-      "via": "messages"
+      "via": "messages",
+      "model": "conversation"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "mess_categories": {
+      "via": "messages",
+      "collection": "mess-category"
     }
   }
 }

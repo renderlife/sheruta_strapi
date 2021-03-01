@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "conversations",
   "info": {
-    "name": "conversation"
+    "name": "conversation",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,8 +18,13 @@
       "dominant": true
     },
     "messages": {
-      "via": "conversation",
-      "collection": "message"
+      "collection": "message",
+      "via": "conversation"
+    },
+    "isClosed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
