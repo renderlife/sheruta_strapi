@@ -12,8 +12,8 @@
   },
   "attributes": {
     "properties": {
-      "collection": "propertie",
       "via": "favourites",
+      "collection": "propertie",
       "dominant": true
     },
     "description": {

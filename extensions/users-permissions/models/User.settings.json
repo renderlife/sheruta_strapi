@@ -84,10 +84,6 @@
       "model": "favourite",
       "via": "users_permissions_user"
     },
-    "personal_info": {
-      "via": "users_permissions_user",
-      "model": "personal-info"
-    },
     "conversations": {
       "via": "users_permissions_users",
       "collection": "conversation"

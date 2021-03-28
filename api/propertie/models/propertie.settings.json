@@ -18,11 +18,6 @@
       "required": true,
       "unique": true
     },
-    "area": {
-      "type": "string",
-      "required": true,
-      "maxLength": 150
-    },
     "bedroom": {
       "type": "integer",
       "default": 0,
@@ -57,18 +52,14 @@
     "location": {
       "type": "string"
     },
-    "status": {
-      "type": "string",
-      "required": true
-    },
     "plots": {
       "default": 0,
       "required": true,
       "type": "integer"
     },
     "agent": {
-      "via": "properties",
-      "model": "agent"
+      "model": "agent",
+      "via": "properties"
     },
     "description": {
       "type": "text",
@@ -77,25 +68,30 @@
       "minLength": 15
     },
     "category": {
-      "via": "properties",
-      "model": "categorie"
+      "model": "categorie",
+      "via": "properties"
     },
     "statu": {
       "model": "statu",
       "via": "properties"
     },
     "favourites": {
-      "via": "properties",
-      "collection": "favourite"
-    },
-    "image": {
-      "model": "image",
-      "via": "propertie"
+      "collection": "favourite",
+      "via": "properties"
     },
     "sittingroom": {
       "type": "integer",
       "default": 0,
       "required": true
+    },
+    "image_urls": {
+      "type": "json",
+      "required": true
+    },
+    "amenities": {
+      "collection": "amenitie",
+      "via": "properties",
+      "dominant": true
     }
   }
 }

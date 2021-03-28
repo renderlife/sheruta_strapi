@@ -40,13 +40,29 @@
       "minLength": 11
     },
     "properties": {
-      "collection": "propertie",
-      "via": "agent"
+      "via": "agent",
+      "collection": "propertie"
     },
     "banner_url": {
       "type": "text",
       "default": "https://img.freepik.com/free-vector/green-background-with-halftone-effect-squares_23-2148661430.jpg?size=626&ext=jpg",
       "required": true
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "personal_info": {
+      "via": "agent",
+      "model": "personal-info"
     }
   }
 }

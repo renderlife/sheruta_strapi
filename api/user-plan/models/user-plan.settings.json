@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_plans",
+  "info": {
+    "name": "user_plan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "image_url": {
+      "type": "text"
+    },
+    "contact_agent": {
+      "type": "boolean"
+    },
+    "property_count": {
+      "type": "integer",
+      "required": true
+    },
+    "email_update": {
+      "type": "boolean"
+    },
+    "week": {
+      "type": "boolean"
+    },
+    "month": {
+      "type": "boolean"
+    }
+  }
+}

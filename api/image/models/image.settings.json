@@ -15,10 +15,6 @@
       "required": true,
       "minLength": 5
     },
-    "propertie": {
-      "via": "image",
-      "model": "propertie"
-    },
     "description": {
       "type": "text"
     }

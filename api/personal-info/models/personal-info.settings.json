@@ -35,9 +35,8 @@
     "instagram": {
       "type": "string"
     },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user",
+    "agent": {
+      "model": "agent",
       "via": "personal_info"
     },
     "religion": {
@@ -49,6 +48,29 @@
     },
     "marital_status": {
       "type": "string"
+    },
+    "nin": {
+      "type": "string"
+    },
+    "temperament": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "next_of_kin_phone": {
+      "type": "integer"
+    },
+    "next_of_kin_address": {
+      "type": "string"
+    },
+    "next_of_kin_name": {
+      "type": "string"
+    },
+    "occupation": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
     }
   }
 }
