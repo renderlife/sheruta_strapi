@@ -77,16 +77,19 @@
       "minLength": 11
     },
     "agent": {
-      "via": "users_permissions_user",
-      "model": "agent"
+      "model": "agent",
+      "via": "users_permissions_user"
     },
     "favourite": {
       "model": "favourite",
       "via": "users_permissions_user"
     },
     "conversations": {
-      "via": "users_permissions_users",
-      "collection": "conversation"
+      "collection": "conversation",
+      "via": "users_permissions_users"
+    },
+    "payment_plan": {
+      "model": "payment-plan"
     }
   }
 }

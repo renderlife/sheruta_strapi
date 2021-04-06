@@ -49,9 +49,6 @@
       "type": "biginteger",
       "required": true
     },
-    "location": {
-      "type": "string"
-    },
     "plots": {
       "default": 0,
       "required": true,
@@ -64,7 +61,6 @@
     "description": {
       "type": "text",
       "required": true,
-      "maxLength": 140,
       "minLength": 15
     },
     "category": {
@@ -92,6 +88,26 @@
       "collection": "amenitie",
       "via": "properties",
       "dominant": true
+    },
+    "payment_plan": {
+      "model": "payment-plan"
+    },
+    "drafted": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "google_location": {
+      "type": "json",
+      "required": true
+    },
+    "location": {
+      "type": "text",
+      "required": true
+    },
+    "uid": {
+      "type": "text",
+      "required": true
     }
   }
 }

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_plans",
+  "info": {
+    "name": "payment_plan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "discount_price": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "text"
+    },
+    "agent_contact": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "property_count": {
+      "type": "biginteger",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "email_update": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "duration_in_days": {
+      "type": "biginteger",
+      "required": true
+    },
+    "duration_in_months": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

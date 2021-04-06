@@ -29,9 +29,9 @@
       "minLength": 5
     },
     "users_permissions_user": {
+      "via": "agent",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "agent"
+      "model": "user"
     },
     "phone_number": {
       "type": "string",

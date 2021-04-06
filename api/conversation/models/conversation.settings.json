@@ -12,9 +12,9 @@
   },
   "attributes": {
     "users_permissions_users": {
+      "via": "conversations",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "conversations",
       "dominant": true
     },
     "messages": {

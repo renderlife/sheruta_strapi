@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/user-plans",
-      "handler": "user-plan.find",
+      "path": "/payment-plans",
+      "handler": "payment-plan.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/user-plans/count",
-      "handler": "user-plan.count",
+      "path": "/payment-plans/count",
+      "handler": "payment-plan.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/user-plans/:id",
-      "handler": "user-plan.findOne",
+      "path": "/payment-plans/:id",
+      "handler": "payment-plan.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/user-plans",
-      "handler": "user-plan.create",
+      "path": "/payment-plans",
+      "handler": "payment-plan.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/user-plans/:id",
-      "handler": "user-plan.update",
+      "path": "/payment-plans/:id",
+      "handler": "payment-plan.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/user-plans/:id",
-      "handler": "user-plan.delete",
+      "path": "/payment-plans/:id",
+      "handler": "payment-plan.delete",
       "config": {
         "policies": []
       }
