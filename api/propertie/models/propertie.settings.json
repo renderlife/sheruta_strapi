@@ -43,7 +43,7 @@
       "type": "boolean",
       "default": false,
       "required": true,
-      "private": true
+      "private": false
     },
     "price": {
       "type": "biginteger",
@@ -108,6 +108,9 @@
     "uid": {
       "type": "text",
       "required": true
+    },
+    "payment_type": {
+      "model": "payment-type"
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_types",
+  "info": {
+    "name": "payment_type"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "abbreviation": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
