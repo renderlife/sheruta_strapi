@@ -25,13 +25,16 @@
       "default": true
     },
     "properties": {
-      "via": "category",
-      "collection": "propertie"
+      "collection": "propertie",
+      "via": "category"
     },
     "requires_personal_info": {
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

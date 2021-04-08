@@ -55,8 +55,8 @@
       "type": "integer"
     },
     "agent": {
-      "model": "agent",
-      "via": "properties"
+      "via": "properties",
+      "model": "agent"
     },
     "description": {
       "type": "text",
@@ -64,15 +64,11 @@
       "minLength": 15
     },
     "category": {
-      "model": "categorie",
-      "via": "properties"
+      "via": "properties",
+      "model": "categorie"
     },
     "statu": {
       "model": "statu",
-      "via": "properties"
-    },
-    "favourites": {
-      "collection": "favourite",
       "via": "properties"
     },
     "sittingroom": {

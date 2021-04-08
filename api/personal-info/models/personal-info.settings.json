@@ -35,10 +35,6 @@
     "instagram": {
       "type": "string"
     },
-    "agent": {
-      "model": "agent",
-      "via": "personal_info"
-    },
     "religion": {
       "type": "string"
     },

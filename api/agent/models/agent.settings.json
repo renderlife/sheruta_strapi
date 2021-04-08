@@ -28,11 +28,6 @@
       "required": true,
       "minLength": 5
     },
-    "users_permissions_user": {
-      "via": "agent",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "phone_number": {
       "type": "string",
       "required": true,
@@ -40,8 +35,8 @@
       "minLength": 11
     },
     "properties": {
-      "via": "agent",
-      "collection": "propertie"
+      "collection": "propertie",
+      "via": "agent"
     },
     "banner_url": {
       "type": "text",
@@ -59,10 +54,6 @@
     },
     "linkedin": {
       "type": "string"
-    },
-    "personal_info": {
-      "via": "agent",
-      "model": "personal-info"
     }
   }
 }

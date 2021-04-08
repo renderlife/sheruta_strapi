@@ -76,20 +76,13 @@
       "maxLength": 15,
       "minLength": 11
     },
-    "agent": {
-      "model": "agent",
-      "via": "users_permissions_user"
+    "first_name": {
+      "type": "string",
+      "required": true
     },
-    "favourite": {
-      "model": "favourite",
-      "via": "users_permissions_user"
-    },
-    "conversations": {
-      "collection": "conversation",
-      "via": "users_permissions_users"
-    },
-    "payment_plan": {
-      "model": "payment-plan"
+    "last_name": {
+      "type": "string",
+      "required": true
     }
   }
 }
