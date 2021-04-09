@@ -14,11 +14,12 @@ module.exports = {
         const newAgent = await knex('agents').insert(body).returning('*')
         if (newAgent.length > 0) {
             const rows = await knex.select('*').from('users-permissions_role');
-            // upgrades regular user to be an agent  
-            //TODO: check role in prod
-            await strapi.plugins['users-permissions'].services.user.edit({ id: body.users_permissions_user }, { role: 3 })
+            const agentRow = rows.filter(x => x.name === "Agent");
+            const user = await knex.select('*').from('users-permissions_user')
+                .where({ id: body.users_permissions_user }).update({ role: agentRow[0].id })
         }
-        return newAgent
+        // console.log(body)
+        return newAgent;
     },
     freeGetProp: async ctx => {
         const knex = strapi.connections.default;

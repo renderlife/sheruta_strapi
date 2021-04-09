@@ -58,6 +58,27 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 15
+    },
+    "bio": {
+      "type": "text"
+    },
+    "avatar_url": {
+      "type": "text",
+      "required": true,
+      "default": "https://jardindemeriem.com/images/temoin/1.jpg"
     }
   }
 }

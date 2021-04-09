@@ -36,7 +36,8 @@
       "type": "string"
     },
     "religion": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "gender": {
       "type": "string",
@@ -58,13 +59,16 @@
       "required": true
     },
     "next_of_kin_phone": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "next_of_kin_address": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "next_of_kin_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "occupation": {
       "type": "string",
@@ -75,6 +79,12 @@
       "unique": true,
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "location": {
+      "type": "text"
+    },
+    "google_location": {
+      "type": "json"
     }
   }
 }
