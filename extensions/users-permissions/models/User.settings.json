@@ -58,31 +58,6 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "avatar_url": {
-      "type": "text",
-      "default": "https://cdn.pixabay.com/photo/2016/11/08/15/21/user-1808597_960_720.png",
-      "required": true,
-      "minLength": 5
-    },
-    "bio": {
-      "type": "text",
-      "maxLength": 140,
-      "minLength": 20
-    },
-    "phone_number": {
-      "type": "string",
-      "required": true,
-      "maxLength": 15,
-      "minLength": 11
-    },
-    "first_name": {
-      "type": "string",
-      "required": true
-    },
-    "last_name": {
-      "type": "string",
-      "required": true
     }
   }
 }

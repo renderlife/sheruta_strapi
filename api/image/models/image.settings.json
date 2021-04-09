@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "images",
+  "info": {
+    "name": "image"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "text",
+      "required": true,
+      "minLength": 5
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -2,6 +2,22 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/agents/free/prop/:property_id",
+      "handler": "agent.freeGetProp",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agents/free/id/:agent_id",
+      "handler": "agent.freeGetId",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/agents",
       "handler": "agent.find",
       "config": {

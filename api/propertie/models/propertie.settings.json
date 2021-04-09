@@ -54,18 +54,10 @@
       "required": true,
       "type": "integer"
     },
-    "agent": {
-      "via": "properties",
-      "model": "agent"
-    },
     "description": {
       "type": "text",
       "required": true,
       "minLength": 15
-    },
-    "category": {
-      "via": "properties",
-      "model": "categorie"
     },
     "statu": {
       "model": "statu",
@@ -107,6 +99,10 @@
     },
     "payment_type": {
       "model": "payment-type"
+    },
+    "agent": {
+      "private": true,
+      "model": "agent"
     }
   }
 }

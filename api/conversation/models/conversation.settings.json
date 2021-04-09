@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conversations",
+  "info": {
+    "name": "conversation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "messages": {
+      "collection": "message",
+      "via": "conversation"
+    },
+    "isClosed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

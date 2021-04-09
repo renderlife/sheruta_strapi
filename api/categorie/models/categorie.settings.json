@@ -24,17 +24,10 @@
       "type": "boolean",
       "default": true
     },
-    "properties": {
-      "collection": "propertie",
-      "via": "category"
-    },
     "requires_personal_info": {
       "type": "boolean",
       "default": false,
       "required": true
-    },
-    "description": {
-      "type": "text"
     }
   }
 }

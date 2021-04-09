@@ -43,7 +43,8 @@
       "required": true
     },
     "marital_status": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "nin": {
       "type": "string"
@@ -52,7 +53,9 @@
       "type": "string"
     },
     "phone_number": {
-      "type": "string"
+      "type": "string",
+      "unique": false,
+      "required": true
     },
     "next_of_kin_phone": {
       "type": "integer"
@@ -67,6 +70,11 @@
       "type": "string",
       "required": true,
       "maxLength": 50
+    },
+    "users_permissions_user": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
