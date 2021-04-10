@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "service"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "requires_personal_info": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "image_url": {
+      "type": "text"
+    }
+  }
+}
