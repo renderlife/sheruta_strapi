@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/personal-infos/agent",
+      "handler": "personal-info.agentInfo",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/personal-infos",
       "handler": "personal-info.find",
       "config": {

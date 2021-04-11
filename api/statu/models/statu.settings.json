@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "status",
   "info": {
-    "name": "statu"
+    "name": "statu",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -22,6 +23,10 @@
     },
     "image_url": {
       "type": "text"
+    },
+    "show": {
+      "type": "boolean",
+      "required": true
     }
   }
 }

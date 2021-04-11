@@ -28,6 +28,22 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "is_apartment": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "is_product": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "is_space": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

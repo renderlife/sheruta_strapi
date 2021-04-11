@@ -13,31 +13,31 @@
   "attributes": {
     "name": {
       "type": "text",
-      "maxLength": 70,
-      "minLength": 20,
+      "maxLength": 140,
+      "minLength": 3,
       "required": true,
       "unique": true
     },
     "bedroom": {
       "type": "integer",
       "default": 0,
-      "required": true
+      "required": false
     },
     "bathroom": {
       "default": 0,
-      "required": true,
+      "required": false,
       "type": "integer"
     },
     "toilet": {
       "type": "integer",
       "default": 0,
       "unique": false,
-      "required": true
+      "required": false
     },
     "stories": {
       "type": "integer",
       "default": 0,
-      "required": true
+      "required": false
     },
     "verified": {
       "type": "boolean",
@@ -51,7 +51,7 @@
     },
     "plots": {
       "default": 0,
-      "required": true,
+      "required": false,
       "type": "integer"
     },
     "description": {
@@ -66,7 +66,7 @@
     "sittingroom": {
       "type": "integer",
       "default": 0,
-      "required": true
+      "required": false
     },
     "image_urls": {
       "type": "json",
@@ -103,6 +103,27 @@
     "agent": {
       "private": true,
       "model": "agent"
+    },
+    "service": {
+      "model": "service"
+    },
+    "discount_price": {
+      "type": "string"
+    },
+    "used": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "amount": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "personal_info": {
+      "private": true,
+      "model": "personal-info"
     }
   }
 }

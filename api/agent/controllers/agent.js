@@ -1,5 +1,6 @@
 'use strict';
 
+const { KnexTimeoutError } = require("knex");
 const Utils = require("../AgentUtils");
 
 /**
@@ -36,5 +37,27 @@ module.exports = {
         const freeAgentData = await knex('agents').returning('*').where({ id: params.agent_id });
         const data = freeAgentData[0];
         return Utils.freeAgentResponse(data)
-    }
+    },
+    properties: async ctx => {
+        const knex = strapi.connections.default;
+        const params = ctx.params;
+        const token = await strapi.plugins[
+            'users-permissions'
+        ].services.jwt.getToken(ctx);
+        console.log(params)
+        const all = await knex.select('*').from('properties').where({
+            agent: params.agent_id
+        })
+        return all;
+    },
+    me: async ctx => {
+        const knex = strapi.connections.default;
+        const token = await strapi.plugins[
+            'users-permissions'
+        ].services.jwt.getToken(ctx);
+        const userData = await knex('agents').where({
+            users_permissions_user: token.id
+        })
+        return userData;
+    },
 };

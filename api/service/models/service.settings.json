@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "services",
   "info": {
-    "name": "service"
+    "name": "service",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -25,6 +26,11 @@
     },
     "image_url": {
       "type": "text"
+    },
+    "show": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
