@@ -83,6 +83,10 @@
     "gander": {
       "type": "string",
       "default": "male"
+    },
+    "agent": {
+      "model": "agent",
+      "via": "user"
     }
   }
 }

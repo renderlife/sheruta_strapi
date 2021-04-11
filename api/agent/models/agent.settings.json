@@ -56,7 +56,8 @@
       "type": "json",
       "required": true
     },
-    "users_permissions_user": {
+    "user": {
+      "via": "agent",
       "plugin": "users-permissions",
       "model": "user"
     }
