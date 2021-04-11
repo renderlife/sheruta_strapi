@@ -79,6 +79,10 @@
       "type": "text",
       "required": true,
       "default": "https://jardindemeriem.com/images/temoin/1.jpg"
+    },
+    "gander": {
+      "type": "string",
+      "default": "male"
     }
   }
 }
