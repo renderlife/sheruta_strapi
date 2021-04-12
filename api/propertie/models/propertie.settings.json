@@ -101,7 +101,6 @@
       "model": "payment-type"
     },
     "agent": {
-      "private": true,
       "model": "agent"
     },
     "service": {
