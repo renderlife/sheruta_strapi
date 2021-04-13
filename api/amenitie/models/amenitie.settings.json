@@ -22,14 +22,14 @@
     "icon": {
       "type": "string"
     },
-    "properties": {
-      "via": "amenities",
-      "collection": "propertie"
-    },
     "show": {
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "properties": {
+      "via": "amenities",
+      "collection": "propertie"
     }
   }
 }

@@ -100,9 +100,6 @@
     "payment_type": {
       "model": "payment-type"
     },
-    "agent": {
-      "model": "agent"
-    },
     "service": {
       "model": "service"
     },

@@ -33,7 +33,7 @@
       "required": true,
       "maxLength": 15,
       "minLength": 11,
-      "private": false
+      "private": true
     },
     "banner_url": {
       "type": "text",
@@ -41,25 +41,32 @@
       "required": true
     },
     "twitter": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "instagram": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "facebook": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "linkedin": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "google_location": {
       "type": "json",
       "required": true
     },
-    "user": {
+    "users_permissions_user": {
       "via": "agent",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "properties": {
+      "collection": "propertie"
     }
   }
 }

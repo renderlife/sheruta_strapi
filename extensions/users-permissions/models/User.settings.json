@@ -70,7 +70,8 @@
     "phone_number": {
       "type": "string",
       "minLength": 10,
-      "maxLength": 15
+      "maxLength": 15,
+      "private": true
     },
     "bio": {
       "type": "text"
@@ -86,7 +87,7 @@
     },
     "agent": {
       "model": "agent",
-      "via": "user"
+      "via": "users_permissions_user"
     }
   }
 }
