@@ -12,16 +12,20 @@
   },
   "attributes": {
     "company_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "company_address": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "supervisor_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "supervisor_number": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "twitter": {
       "type": "string"
@@ -58,10 +62,6 @@
       "unique": false,
       "required": true
     },
-    "next_of_kin_phone": {
-      "type": "integer",
-      "required": true
-    },
     "next_of_kin_address": {
       "type": "string",
       "required": true
@@ -85,6 +85,14 @@
     },
     "google_location": {
       "type": "json"
+    },
+    "next_of_kin_phone": {
+      "type": "string",
+      "required": true
+    },
+    "personal_info": {
+      "type": "json",
+      "private": true
     }
   }
 }

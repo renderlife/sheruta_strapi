@@ -120,6 +120,9 @@
     "personal_info": {
       "private": true,
       "model": "personal-info"
+    },
+    "agent": {
+      "model": "agent"
     }
   }
 }
