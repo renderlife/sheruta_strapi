@@ -73,11 +73,10 @@
       "required": true
     },
     "amenities": {
-      "collection": "amenitie",
-      "via": "properties",
-      "dominant": true
+      "collection": "amenitie"
     },
     "payment_plan": {
+      "private": true,
       "model": "payment-plan"
     },
     "drafted": {
@@ -123,6 +122,9 @@
     },
     "agent": {
       "model": "agent"
+    },
+    "categorie": {
+      "model": "categorie"
     }
   }
 }

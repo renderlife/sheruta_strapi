@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "amenities",
+  "collectionName": "blog_categories",
   "info": {
-    "name": "amenitie",
-    "description": ""
+    "name": "blog_categorie"
   },
   "options": {
     "increments": true,
@@ -16,16 +15,16 @@
       "required": true,
       "unique": true
     },
-    "des": {
+    "image_url": {
       "type": "text"
-    },
-    "icon": {
-      "type": "string"
     },
     "show": {
       "type": "boolean",
-      "default": true,
-      "required": true
+      "default": true
+    },
+    "blogs": {
+      "collection": "blog",
+      "via": "blog_categorie"
     }
   }
 }

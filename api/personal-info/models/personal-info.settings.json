@@ -77,6 +77,7 @@
     },
     "users_permissions_user": {
       "unique": true,
+      "private": true,
       "plugin": "users-permissions",
       "model": "user"
     },

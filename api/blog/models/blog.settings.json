@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "name": "blog"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "body_text": {
+      "type": "text",
+      "required": true
+    },
+    "body_html": {
+      "type": "text",
+      "required": true
+    },
+    "uuid": {
+      "type": "text",
+      "required": true
+    },
+    "agent": {
+      "model": "agent"
+    },
+    "image_url": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "is_drafted": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "payment_plan": {
+      "model": "payment-plan"
+    },
+    "blog_categorie": {
+      "via": "blogs",
+      "model": "blog-categorie"
+    }
+  }
+}

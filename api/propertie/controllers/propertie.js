@@ -1,8 +1,45 @@
 'use strict';
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/concepts/controllers.html#core-controllers)
- * to customize this controller
- */
-
-module.exports = {};
+module.exports = {
+    categoryLimit: async (ctx) => {
+        const Knex = strapi.connections.default;
+        console.log(ctx.params)
+        const { limit, category } = ctx.params;
+        const query = {
+            _limit: limit,
+            categorie: category
+        }
+        const properties = await strapi.query('propertie').find(query)
+        properties.forEach(val => {
+            delete val.drafted;
+            delete val.personal_info;
+            delete val.updated_by;
+            delete val.agent;
+            delete val.service.description;
+            delete val.service.requires_personal_info;
+            delete val.service.requires_personal_info;
+            delete val.service.image_url;
+        })
+        return properties;
+    },
+    limit: async (ctx) => {
+        const Knex = strapi.connections.default;
+        console.log(ctx.params)
+        const { limit } = ctx.params;
+        const query = {
+            _limit: limit,
+        }
+        const properties = await strapi.query('propertie').find(query)
+        properties.forEach(val => {
+            delete val.drafted;
+            delete val.personal_info;
+            delete val.updated_by;
+            delete val.agent;
+            delete val.service.description;
+            delete val.service.requires_personal_info;
+            delete val.service.requires_personal_info;
+            delete val.service.image_url;
+        })
+        return properties;
+    },
+};
