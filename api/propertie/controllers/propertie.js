@@ -42,4 +42,12 @@ module.exports = {
         })
         return properties;
     },
+
+    indexSearch: async ctx => {
+        const { keyword } = ctx.params;
+        console.log('KEYWORD ---', keyword);
+        const Knex = strapi.connections.default;
+        const result = await Knex.raw(`select location from properties where location ILIKE '%${keyword}%';`)
+        return result;
+    }
 };

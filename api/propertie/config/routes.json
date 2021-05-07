@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/properties/search/:keyword",
+      "handler": "propertie.indexSearch",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/properties/limit/:limit",
       "handler": "propertie.limit",
       "config": {
