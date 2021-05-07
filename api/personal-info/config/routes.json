@@ -1,6 +1,22 @@
 {
   "routes": [
     {
+      "method": "POST",
+      "path": "/verify/email/request",
+      "handler": "personal-info.emailVerifyRequest",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/verify/email",
+      "handler": "personal-info.verifyEmail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "GET",
       "path": "/personal-infos/agent",
       "handler": "personal-info.agentInfo",

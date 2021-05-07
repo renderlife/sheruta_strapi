@@ -11,6 +11,8 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
     "knex": "<0.20.0",
     "pg": "latest",
     "pg-connection-string": "^2.4.0",
@@ -23,7 +25,9 @@
     "strapi-plugin-email": "3.4.6",
     "strapi-plugin-upload": "3.4.6",
     "strapi-plugin-users-permissions": "3.4.6",
-    "strapi-utils": "3.4.6"
+    "strapi-provider-email-sendgrid": "^3.6.1",
+    "strapi-utils": "3.4.6",
+    "uuid": "^8.3.2"
   },
   "author": {
     "name": "A Strapi developer"
