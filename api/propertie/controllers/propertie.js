@@ -49,5 +49,55 @@ module.exports = {
         const Knex = strapi.connections.default;
         const result = await Knex.raw(`select location from properties where location ILIKE '%${keyword}%';`)
         return result;
+    },
+
+    searchProperties: async ctx => {
+        const Knex = strapi.connections.default;
+        console.log(ctx.params);
+        const {location, category, service } = ctx.params;
+
+        const exactMatch = await Knex('properties').where(
+            { 
+                categorie: category,
+                service: service
+            }
+        ).whereRaw(`location ILIKE '%${location}%'`)
+        .returning('*');
+
+        const locationMatch = await Knex('properties').whereRaw(
+            `location ILIKE '%${location}%'`
+        ).returning('*');
+
+        const categoryMatch = await Knex('properties').where({ 
+            categorie: category
+        })
+        .whereRaw(
+            `location ILIKE '%${location}%'`
+        ).returning('*');
+
+        const serviceMatch = await Knex('properties').where({ 
+            service: service
+        })
+        .whereRaw(
+            `location ILIKE '%${location}%'`
+        ).returning('*');
+
+        return [
+            {
+                heading: 'Exact Match',
+                data: exactMatch,
+                length: exactMatch.length
+            },
+            {
+                heading: 'Category Match',
+                data: categoryMatch,
+                length: categoryMatch.length
+            },
+            {
+                heading: 'Service Match',
+                data: serviceMatch,
+                length: serviceMatch.length
+            },
+        ]
     }
 };

@@ -58,8 +58,8 @@
     },
     {
       "method": "POST",
-      "path": "/agents",
-      "handler": "agent.create",
+      "path": "/agents/new",
+      "handler": "agent.new",
       "config": {
         "policies": []
       }

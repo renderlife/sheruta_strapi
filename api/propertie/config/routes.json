@@ -2,7 +2,15 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/properties/search/:keyword",
+      "path": "/properties/search/:category/:location/:service",
+      "handler": "propertie.searchProperties",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/properties/search/keyword/:keyword",
       "handler": "propertie.indexSearch",
       "config": {
         "policies": []

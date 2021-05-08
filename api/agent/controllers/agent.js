@@ -9,19 +9,13 @@ const Utils = require("../AgentUtils");
  */
 
 module.exports = {
-    create: async ctx => {
+    new: async ctx => {
         const knex = strapi.connections.default;
         const body = ctx.request.body;
-        // const newAgent = await knex('agents').insert(body).returning('*')
+        console.log('BODY ---', body);
         const newAgent = await strapi.query('agent').create(body);
-        // console.log('created ----', newAgent);
-        if (newAgent.length > 0) {
-            const rows = await knex.select('*').from('users-permissions_role');
-            const agentRow = rows.filter(x => x.name === "Agent");
-            const user = await knex.select('*').from('users-permissions_user')
-                .where({ id: body.users_permissions_user }).update({ role: agentRow[0].id, agent: newAgent[0].id })
-                console.log('created ----', user)
-        }
+        const user = await knex('users-permissions_user').where({ id: body.users_permissions_user }).update({ role: 3 }).returning('*')
+        console.log('USER --', user);
         return newAgent;
     },
     freeGetProp: async ctx => {
